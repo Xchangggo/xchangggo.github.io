@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Tag } from "@/components/ui/Tag";
 import { siteProfile } from "@/content/site";
@@ -11,14 +12,19 @@ export default function HomePage() {
   const topProjects = projects.slice(0, 3);
   const topResearch = researchThemes.slice(0, 3);
   const topNews = news.slice(0, 4);
-  const monogram = siteProfile.bilingualName?.trim().charAt(0) || siteProfile.name.trim().charAt(0);
 
   return (
     <Container className="py-10 md:py-14">
       <section className="grid items-start gap-8 border-b border-line pb-10 md:grid-cols-[240px_minmax(0,1fr)]">
         <div className="mx-auto flex h-[280px] w-full max-w-[220px] flex-col items-center justify-center overflow-hidden rounded-2xl border border-line bg-gradient-to-br from-accentSoft to-paper shadow-sm md:mx-0">
-          <span className="font-display text-7xl text-accent">{monogram}</span>
-          <span className="mt-2 px-3 text-center text-xs uppercase tracking-[0.2em] text-muted">Academic Profile</span>
+          <Image
+            src="/xumengchang.jpg"
+            alt={`${siteProfile.name} portrait`}
+            width={220}
+            height={280}
+            className="h-full w-full object-cover"
+            priority
+          />
         </div>
 
         <div className="space-y-4">
