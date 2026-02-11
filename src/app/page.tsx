@@ -28,39 +28,39 @@ export default function HomePage() {
         </div>
 
         <div className="space-y-4">
-          <p className="text-sm font-medium uppercase tracking-[0.16em] text-muted">Academic Profile</p>
+          <p data-i18n="home.profile" className="text-sm font-medium uppercase tracking-[0.16em] text-muted">Academic Profile</p>
           <h1 className="font-display text-4xl leading-tight text-ink md:text-5xl">
             {siteProfile.name} <span className="text-2xl text-muted md:text-3xl">({siteProfile.bilingualName})</span>
           </h1>
-          <p className="text-lg text-ink/90">{siteProfile.tagline}</p>
-          <p className="max-w-3xl text-base leading-relaxed text-muted">{siteProfile.intro}</p>
+          <p data-i18n="home.tagline" className="text-lg text-ink/90">{siteProfile.tagline}</p>
+          <p data-i18n="home.intro" className="max-w-3xl text-base leading-relaxed text-muted">{siteProfile.intro}</p>
 
           <div className="grid gap-2 rounded-xl border border-line bg-paper/60 p-4 text-sm md:grid-cols-2">
             <p>
-              <span className="font-semibold text-ink">Current:</span> {siteProfile.currentRole.title}
+              <span data-i18n="home.current" className="font-semibold text-ink">Current:</span> {siteProfile.currentRole.title}
             </p>
             <p>
-              <span className="font-semibold text-ink">Institution:</span> {siteProfile.currentRole.institution}
+              <span data-i18n="home.institution" className="font-semibold text-ink">Institution:</span> {siteProfile.currentRole.institution}
             </p>
             <p>
-              <span className="font-semibold text-ink">Location:</span> {siteProfile.location}
+              <span data-i18n="home.location" className="font-semibold text-ink">Location:</span> {siteProfile.location}
             </p>
             <p>
-              <span className="font-semibold text-ink">Email:</span> {siteProfile.email}
+              <span data-i18n="home.email" className="font-semibold text-ink">Email:</span> {siteProfile.email}
             </p>
           </div>
 
           <div className="flex flex-wrap gap-4 pt-1 text-sm font-semibold text-accent">
-            <Link href="/research" className="hover:underline">
+            <Link href="/research" data-i18n="nav.research" className="hover:underline">
               Research
             </Link>
-            <Link href="/projects" className="hover:underline">
+            <Link href="/projects" data-i18n="nav.projects" className="hover:underline">
               Projects
             </Link>
-            <Link href="/cv" className="hover:underline">
+            <Link href="/cv" data-i18n="nav.cv" className="hover:underline">
               CV
             </Link>
-            <Link href="/contact" className="hover:underline">
+            <Link href="/contact" data-i18n="nav.contact" className="hover:underline">
               Contact
             </Link>
           </div>
@@ -69,7 +69,7 @@ export default function HomePage() {
 
       <section className="grid gap-8 py-10 md:grid-cols-2">
         <div className="space-y-4">
-          <h2 className="font-display text-2xl text-ink md:text-3xl">Research Focus</h2>
+          <h2 data-i18n="home.research_focus" className="font-display text-2xl text-ink md:text-3xl">Research Focus</h2>
           <div className="space-y-3">
             {topResearch.map((theme) => (
               <article key={theme.id} className="rounded-xl border border-line p-4">
@@ -81,7 +81,7 @@ export default function HomePage() {
         </div>
 
         <div className="space-y-4">
-          <h2 className="font-display text-2xl text-ink md:text-3xl">Selected Projects</h2>
+          <h2 data-i18n="home.selected_projects" className="font-display text-2xl text-ink md:text-3xl">Selected Projects</h2>
           <div className="space-y-3">
             {topProjects.map((project) => (
               <article key={project.id} className="rounded-xl border border-line p-4">
@@ -102,7 +102,7 @@ export default function HomePage() {
       </section>
 
       <section className="border-t border-line pt-8">
-        <h2 className="font-display text-2xl text-ink md:text-3xl">Recent News</h2>
+        <h2 data-i18n="home.recent_news" className="font-display text-2xl text-ink md:text-3xl">Recent News</h2>
         <ul className="mt-3 space-y-2 text-sm text-muted">
           {topNews.map((item) => (
             <li key={`${item.date}-${item.title}`}>
