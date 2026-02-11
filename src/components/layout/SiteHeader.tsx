@@ -51,7 +51,7 @@ export function SiteHeader() {
                     href={link.href}
                     data-i18n={navKeyByHref[link.href] ?? undefined}
                     className={clsx(
-                      "text-sm font-medium transition-colors",
+                      "text-base font-semibold transition-colors",
                       active ? "text-accent" : "text-ink/80 hover:text-accent"
                     )}
                   >
@@ -73,7 +73,7 @@ export function SiteHeader() {
                     href={link.href}
                     data-i18n={navKeyByHref[link.href] ?? undefined}
                     className={clsx(
-                      "block rounded-md border border-line px-2 py-1 text-xs",
+                      "block rounded-md border border-line px-3 py-1.5 text-sm font-medium",
                       active ? "bg-accentSoft text-accent" : "text-ink/80"
                     )}
                   >
