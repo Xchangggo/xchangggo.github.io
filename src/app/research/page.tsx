@@ -10,51 +10,79 @@ export default function ResearchPage() {
   const projectsById = new Map(projects.map((project) => [project.id, project]));
 
   return (
-    <Container className="space-y-16 py-10 md:py-16">
+    <Container className="space-y-12 py-10 md:space-y-14 md:py-16">
       <PageIntro
         eyebrow="Research"
-        title="Themes and directions"
-        description="Current work centers on CNV detection algorithms, probabilistic genomic modeling, and translation of bioinformatics methods into precision medicine workflows."
+        title="Research Framework"
+        description="Focused themes in CNV and computational genomics, organized as concise modules for fast reading and clear project mapping."
         eyebrowKey="research.eyebrow"
-        titleKey="research.title"
-        descriptionKey="research.description"
+        titleKey="research.framework_title"
+        descriptionKey="research.framework_desc"
       />
 
-      <div className="grid gap-5">
+      <section className="grid gap-4 md:grid-cols-3">
+        <article className="rounded-2xl border border-line/70 bg-paper p-5 shadow-card">
+          <p data-i18n="research.metric_themes" className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
+            Themes
+          </p>
+          <p className="mt-3 font-display text-4xl text-accent">{researchThemes.length}</p>
+        </article>
+        <article className="rounded-2xl border border-line/70 bg-paper p-5 shadow-card">
+          <p data-i18n="research.metric_projects" className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
+            Linked projects
+          </p>
+          <p className="mt-3 font-display text-4xl text-[color:var(--color-accent-2)]">{projects.length}</p>
+        </article>
+        <article className="rounded-2xl border border-line/70 bg-paper p-5 shadow-card">
+          <p data-i18n="research.metric_route" className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
+            Portfolio route
+          </p>
+          <Link href="/portfolio" data-i18n="nav.portfolio" className="mt-3 inline-flex text-lg font-semibold text-[color:var(--color-accent-3)] underline-offset-4 hover:underline">
+            Portfolio
+          </Link>
+        </article>
+      </section>
+
+      <section className="space-y-5">
         {researchThemes.map((theme, idx) => (
           <Reveal key={theme.id} delay={idx * 0.04}>
-            <article id={theme.id} className="rounded-2xl border border-line/70 bg-paper/90 p-6 shadow-card md:p-8">
-              <h2 data-i18n={`content.research.${theme.id}.title`} className="font-display text-3xl text-ink">
-                {theme.title}
-              </h2>
-              <p data-i18n={`content.research.${theme.id}.summary`} className="mt-4 max-w-4xl text-base leading-relaxed text-muted md:text-lg">
-                {theme.summary}
-              </p>
-
-              <div className="mt-6 grid gap-5 md:grid-cols-3">
+            <article id={theme.id} className="rounded-2xl border border-line/70 bg-paper p-6 shadow-card md:p-8">
+              <div className="grid gap-5 md:grid-cols-[minmax(0,1fr)_280px]">
                 <div>
-                  <h3 data-i18n="research.keywords" className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">Keywords</h3>
-                  <div className="mt-3 flex flex-wrap gap-2">
+                  <h2 data-i18n={`content.research.${theme.id}.title`} className="font-display text-3xl text-ink">
+                    {theme.title}
+                  </h2>
+                  <p data-i18n={`content.research.${theme.id}.summary`} className="mt-3 text-sm leading-relaxed text-muted md:text-base">
+                    {theme.summary}
+                  </p>
+                  <div className="mt-4 flex flex-wrap gap-2">
                     {theme.keywords.map((item, itemIdx) => (
-                      <Tag key={item} data-i18n={`content.research.${theme.id}.keywords.${itemIdx}`} className="keyword-tag">
+                      <Tag
+                        key={item}
+                        data-i18n={`content.research.${theme.id}.keywords.${itemIdx}`}
+                        className={`keyword-tag keyword-tag--${itemIdx % 3}`}
+                      >
                         {item}
                       </Tag>
                     ))}
                   </div>
                 </div>
-                <div>
-                  <h3 data-i18n="research.methods" className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">Methods</h3>
-                  <ul className="mt-3 space-y-1 text-sm text-muted">
+
+                <div className="rounded-xl border border-line/70 bg-paper/90 p-4">
+                  <h3 data-i18n="research.methods" className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
+                    Methods
+                  </h3>
+                  <ul className="mt-2 space-y-1 text-sm text-muted">
                     {theme.methods.map((item, itemIdx) => (
                       <li key={item} data-i18n={`content.research.${theme.id}.methods.${itemIdx}`}>
                         - {item}
                       </li>
                     ))}
                   </ul>
-                </div>
-                <div>
-                  <h3 data-i18n="research.applications" className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">Applications</h3>
-                  <ul className="mt-3 space-y-1 text-sm text-muted">
+                  <h3 data-i18n="research.applications" className="mt-4 text-xs font-semibold uppercase tracking-[0.2em] text-muted">
+                    Applications
+                  </h3>
+                  <ul className="mt-2 space-y-1 text-sm text-muted">
                     {theme.applications.map((item, itemIdx) => (
                       <li key={item} data-i18n={`content.research.${theme.id}.applications.${itemIdx}`}>
                         - {item}
@@ -65,11 +93,11 @@ export default function ResearchPage() {
               </div>
 
               {theme.relatedProjectIds?.length ? (
-                <div className="mt-7 border-t border-line/70 pt-5">
+                <div className="mt-5 border-t border-line/70 pt-4">
                   <h3 data-i18n="research.related_projects" className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
                     Related projects
                   </h3>
-                  <div className="mt-3 grid gap-3 md:grid-cols-2">
+                  <div className="mt-2 grid gap-3 md:grid-cols-2">
                     {theme.relatedProjectIds
                       .flatMap((projectId) => {
                         const project = projectsById.get(projectId);
@@ -78,8 +106,8 @@ export default function ResearchPage() {
                       .map((project) => (
                         <Link
                           key={project.id}
-                          href={`/projects#${project.id}`}
-                          className="rounded-lg border border-line/70 bg-paper/80 p-3 transition-colors hover:border-accent/40"
+                          href={`/portfolio#project-${project.id}`}
+                          className="rounded-lg border border-line/70 bg-paper/90 p-3 transition-colors hover:border-accent/45"
                         >
                           <p data-i18n={`content.projects.${project.id}.title`} className="text-sm font-semibold text-ink">
                             {project.title}
@@ -95,20 +123,7 @@ export default function ResearchPage() {
             </article>
           </Reveal>
         ))}
-      </div>
-
-      <Reveal>
-        <section className="rounded-xl border border-dashed border-line bg-paper/75 p-6">
-          <h2 data-i18n="research.refs_title" className="font-display text-2xl text-ink">Publication and CV references</h2>
-          <p data-i18n="research.refs_desc" className="mt-3 max-w-3xl text-sm leading-relaxed text-muted">
-            The research section is backed by structured content with publication mappings, making it easy to expand into dedicated publication pages and
-            maintain consistency across CV and project sections.
-          </p>
-          <Link href="/cv" data-i18n="research.refs_link" className="mt-4 inline-flex text-sm font-semibold text-accent underline-offset-4 hover:underline">
-            See current CV entries
-          </Link>
-        </section>
-      </Reveal>
+      </section>
     </Container>
   );
 }

@@ -53,10 +53,10 @@ export default function HomePage() {
             <Link href="/research" data-i18n="nav.research" className="hover:underline">
               Research
             </Link>
-            <Link href="/projects" data-i18n="nav.projects" className="hover:underline">
+            <Link href="/portfolio#projects" data-i18n="nav.projects" className="hover:underline">
               Projects
             </Link>
-            <Link href="/cv" data-i18n="nav.cv" className="hover:underline">
+            <Link href="/portfolio#cv" data-i18n="nav.cv" className="hover:underline">
               CV
             </Link>
             <Link href="/contact" data-i18n="nav.contact" className="hover:underline">
@@ -86,7 +86,7 @@ export default function HomePage() {
             {topProjects.map((project) => (
               <article key={project.id} className="rounded-xl border border-line p-4">
                 <div className="flex items-start justify-between gap-3">
-                  <Link href={`/projects#${project.id}`} data-i18n={`content.projects.${project.id}.title`} className="font-semibold text-ink underline-offset-4 hover:text-accent hover:underline">
+                  <Link href={`/portfolio#project-${project.id}`} data-i18n={`content.projects.${project.id}.title`} className="font-semibold text-ink underline-offset-4 hover:text-accent hover:underline">
                     {project.title}
                   </Link>
                   <span data-i18n={`content.projects.${project.id}.period`} className="shrink-0 text-xs font-semibold uppercase tracking-[0.14em] text-muted">

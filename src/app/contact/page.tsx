@@ -51,12 +51,12 @@ export default function ContactPage() {
                     href={link.href}
                     target={link.href.startsWith("mailto:") ? undefined : "_blank"}
                     rel={link.href.startsWith("mailto:") ? undefined : "noreferrer"}
-                    className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-colors hover:text-accent"
+                    className="inline-flex items-center gap-3 text-sm font-semibold text-ink transition-colors hover:text-accent"
                   >
                     <span data-i18n={`content.social.${link.iconKey}.icon`} className="rounded-full border border-line px-2 py-1 text-xs text-muted">
                       {iconByKey[link.iconKey]}
                     </span>
-                    <span data-i18n={`content.social.${link.iconKey}.label`}>{link.label}</span>
+                    <span>{link.label}</span>
                   </Link>
                 </li>
               ))}

@@ -12,8 +12,9 @@ export function HomeHero() {
         <p className="text-sm font-semibold uppercase tracking-[0.22em] text-muted">Academic Homepage</p>
       </Reveal>
       <Reveal delay={0.06}>
-        <h1 className="mt-4 font-display text-4xl leading-tight text-ink md:text-6xl">
-          {siteProfile.name} <span className="text-2xl text-muted md:text-4xl">({siteProfile.bilingualName})</span>
+        <h1 className="mt-4 font-display leading-tight text-ink">
+          <span className="block text-4xl md:text-6xl">{siteProfile.bilingualName}</span>
+          <span className="mt-2 block text-3xl text-muted md:text-5xl">{siteProfile.name}</span>
         </h1>
       </Reveal>
       <Reveal delay={0.12}>
@@ -25,10 +26,10 @@ export function HomeHero() {
       <Reveal delay={0.24}>
         <div className="mt-8 flex flex-wrap gap-3">
           <LinkButton href="/research">Explore Research</LinkButton>
-          <LinkButton href="/projects" variant="ghost">
+          <LinkButton href="/portfolio#projects" variant="ghost">
             View Projects
           </LinkButton>
-          <LinkButton href="/cv" variant="ghost">
+          <LinkButton href="/portfolio#cv" variant="ghost">
             Open CV
           </LinkButton>
         </div>
