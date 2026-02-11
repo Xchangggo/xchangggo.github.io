@@ -8,10 +8,10 @@ export const news: NewsItem[] = [
       "Completed graduate training with a bioinformatics focus on CNV detection, genomic data analysis, and cross-disciplinary statistical modeling."
   },
   {
-    date: "2024-12",
-    title: "Co-first third author manuscript submitted to Journal of Advanced Research",
+    date: "2025-12",
+    title: "Co-first author manuscript accepted by Journal of Advanced Research",
     description:
-      "Submitted " +
+      "Accepted manuscript " +
       "\"A medium throughput approach for single cell copy number variation sequencing towards efficient application in clinics\" " +
       "with responsibilities in pipeline development, visualization, and CNV algorithm implementation."
   },

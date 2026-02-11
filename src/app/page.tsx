@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Tag } from "@/components/ui/Tag";
 import { siteProfile } from "@/content/site";
@@ -17,14 +16,8 @@ export default function HomePage() {
     <Container className="py-10 md:py-14">
       <section className="grid items-start gap-8 border-b border-line pb-10 md:grid-cols-[240px_minmax(0,1fr)]">
         <div className="mx-auto flex h-[280px] w-full max-w-[220px] flex-col items-center justify-center overflow-hidden rounded-2xl border border-line bg-gradient-to-br from-accentSoft to-paper shadow-sm md:mx-0">
-          <Image
-            src="/xumengchang.jpg"
-            alt={`${siteProfile.name} portrait`}
-            width={220}
-            height={280}
-            className="h-full w-full object-cover"
-            priority
-          />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="xumengchang.jpg" alt={`${siteProfile.name} portrait`} className="h-full w-full object-cover" />
         </div>
 
         <div className="space-y-4">

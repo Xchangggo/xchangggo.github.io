@@ -36,7 +36,7 @@ export const i18n: Record<SupportedLanguage, Record<string, string>> = {
     "about.bio.p2":
       "他毕业于南方医科大学生物学硕士专业，并获得东北大学应用统计学学士学位，形成了扎实的统计建模与生物医学数据分析基础。",
     "about.bio.p3":
-      "近期论文工作包括向《Journal of Advanced Research》投稿的稿件 <em>A medium throughput approach for single cell copy number variation sequencing towards efficient application in clinics</em>，并参与相关发明专利申请。",
+      "近期论文工作包括由共同第一作者完成并被 Journal of Advanced Research 接收的稿件 <em>A medium throughput approach for single cell copy number variation sequencing towards efficient application in clinics</em>，并参与相关发明专利申请。",
     "about.research_interests": "研究兴趣",
     "about.education_timeline": "教育经历",
     "projects.eyebrow": "项目",
@@ -171,9 +171,9 @@ export const i18n: Record<SupportedLanguage, Record<string, string>> = {
     "content.news.2025-06.title": "获南方医科大学生物学硕士学位",
     "content.news.2025-06.description":
       "完成以 CNV 检测、基因组数据分析和跨学科统计建模为核心的生物信息学研究训练。",
-    "content.news.2024-12.title": "以共同第一第三作者身份向 Journal of Advanced Research 投稿",
-    "content.news.2024-12.description":
-      "投稿论文《A medium throughput approach for single cell copy number variation sequencing towards efficient application in clinics》，负责流程开发、可视化和 CNV 算法实现。",
+    "content.news.2025-12.title": "共同第一作者论文被 Journal of Advanced Research 接收",
+    "content.news.2025-12.description":
+      "论文《A medium throughput approach for single cell copy number variation sequencing towards efficient application in clinics》已接收，负责流程开发、可视化和 CNV 算法实现。",
     "content.news.2024-10.title": "参与 DNA 拷贝数检测发明专利申请",
     "content.news.2024-10.description": "参与基于密度曲线的 DNA 拷贝数检测方法设计与技术文档撰写。",
     "content.news.2024-03.title": "开发并维护 CNV 分析 R 工具包",
@@ -291,7 +291,7 @@ export const i18n: Record<SupportedLanguage, Record<string, string>> = {
     "about.bio.p2":
       "He received an MSc in Biology from Southern Medical University and a BSc in Applied Statistics from Northeastern University, building a strong foundation in statistics, modeling, and data analysis for biomedical research.",
     "about.bio.p3":
-      "Recent publication activity includes the manuscript <em>A medium throughput approach for single cell copy number variation sequencing towards efficient application in clinics</em> submitted to Journal of Advanced Research (under review). Work also includes participation in related invention patent applications.",
+      "Recent publication activity includes the co-first-author manuscript <em>A medium throughput approach for single cell copy number variation sequencing towards efficient application in clinics</em> accepted by Journal of Advanced Research. Work also includes participation in related invention patent applications.",
     "about.research_interests": "Research interests",
     "about.education_timeline": "Education timeline",
     "projects.eyebrow": "Projects",
@@ -428,9 +428,9 @@ export const i18n: Record<SupportedLanguage, Record<string, string>> = {
     "content.news.2025-06.title": "Received MSc degree in Biology from Southern Medical University",
     "content.news.2025-06.description":
       "Completed graduate training with a bioinformatics focus on CNV detection, genomic data analysis, and cross-disciplinary statistical modeling.",
-    "content.news.2024-12.title": "Co-first third author manuscript submitted to Journal of Advanced Research",
-    "content.news.2024-12.description":
-      "Submitted \"A medium throughput approach for single cell copy number variation sequencing towards efficient application in clinics\" with responsibilities in pipeline development, visualization, and CNV algorithm implementation.",
+    "content.news.2025-12.title": "Co-first author manuscript accepted by Journal of Advanced Research",
+    "content.news.2025-12.description":
+      "Accepted manuscript \"A medium throughput approach for single cell copy number variation sequencing towards efficient application in clinics\" with responsibilities in pipeline development, visualization, and CNV algorithm implementation.",
     "content.news.2024-10.title": "Participated in invention patent application on DNA copy number detection",
     "content.news.2024-10.description":
       "Contributed to method design and technical documentation for a density-curve-based DNA copy number detection approach.",

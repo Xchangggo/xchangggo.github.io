@@ -4,8 +4,8 @@ export const publications: PublicationItem[] = [
   {
     id: "jar-cnv-2024",
     title: "A medium throughput approach for single cell copy number variation sequencing towards efficient application in clinics",
-    venue: "Journal of Advanced Research (under review)",
-    year: 2024,
+    venue: "Journal of Advanced Research (accepted)",
+    year: 2025,
     authors: ["G. Lin", "C. Chen", "M. Xu", "B. Peng", "Z. Dong", "...", "X. Pan"],
     links: [
       {
