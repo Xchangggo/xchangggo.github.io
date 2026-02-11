@@ -8,7 +8,8 @@ export const projects: ProjectItem[] = [
     summary:
       "Systematically benchmarked mainstream CNV tools (including Ginkgo, DeepCNA, and SCOPE) and developed a DP-GMM-based algorithm that improves CNV detection accuracy and robustness.",
     tags: ["CNV", "DP-GMM", "Genomics", "Algorithm"],
-    featured: true
+    featured: true,
+    relatedResearchIds: ["cnv-detection", "probabilistic-modeling", "precision-medicine"]
   },
   {
     id: "traceable-sccnv",
@@ -17,7 +18,8 @@ export const projects: ProjectItem[] = [
     summary:
       "Built an end-to-end single-cell CNV analysis workflow and developed a peak detection method using local density and ploidy information for CNV identification.",
     tags: ["Single-cell", "CNV", "Pipeline", "Bioinformatics"],
-    featured: true
+    featured: true,
+    relatedResearchIds: ["cnv-detection", "probabilistic-modeling", "precision-medicine"]
   },
   {
     id: "cnv-r-toolkit",
@@ -26,7 +28,8 @@ export const projects: ProjectItem[] = [
     summary:
       "Implemented and maintained an R analysis toolkit for algorithm execution, result visualization, figure generation, and manuscript-ready layout support.",
     tags: ["R", "Visualization", "Reproducibility", "Scientific Computing"],
-    featured: true
+    featured: true,
+    relatedResearchIds: ["cnv-detection", "precision-medicine"]
   },
   {
     id: "market-analysis-competition",

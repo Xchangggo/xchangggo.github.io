@@ -37,6 +37,7 @@ export type ResearchTheme = {
   methods: string[];
   applications: string[];
   publicationIds?: string[];
+  relatedProjectIds?: string[];
 };
 
 export type ProjectLink = {
@@ -52,6 +53,7 @@ export type ProjectItem = {
   tags: string[];
   links?: ProjectLink[];
   featured?: boolean;
+  relatedResearchIds?: string[];
 };
 
 export type NewsItem = {

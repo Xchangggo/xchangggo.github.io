@@ -9,7 +9,8 @@ export const researchThemes: ResearchTheme[] = [
     keywords: ["CNV", "Single-cell sequencing", "NGS", "Genomics"],
     methods: ["Peak-based signal analysis", "Coverage normalization", "Comparative tool benchmarking"],
     applications: ["Tumor heterogeneity studies", "Clinical research pipelines", "Individual-level genomic profiling"],
-    publicationIds: ["jar-cnv-2024"]
+    publicationIds: ["jar-cnv-2024"],
+    relatedProjectIds: ["dpgmm-cnv", "traceable-sccnv", "cnv-r-toolkit"]
   },
   {
     id: "probabilistic-modeling",
@@ -18,7 +19,8 @@ export const researchThemes: ResearchTheme[] = [
       "I apply and extend probabilistic models such as hidden Markov models and Dirichlet process Gaussian mixture models to improve CNV segmentation and state inference.",
     keywords: ["HMM", "DP-GMM", "Bayesian modeling", "State inference"],
     methods: ["Hidden-state decoding", "Nonparametric mixture modeling", "Model selection and regularization"],
-    applications: ["Robust CNV calling", "Noise-aware segmentation", "Automated genome interpretation"]
+    applications: ["Robust CNV calling", "Noise-aware segmentation", "Automated genome interpretation"],
+    relatedProjectIds: ["dpgmm-cnv", "traceable-sccnv"]
   },
   {
     id: "precision-medicine",
@@ -27,6 +29,7 @@ export const researchThemes: ResearchTheme[] = [
       "My long-term goal is to translate computational genomics methods into practical clinical workflows, linking algorithmic rigor with interpretable outputs for personalized medicine.",
     keywords: ["Bioinformatics", "Clinical translation", "Precision medicine", "Reproducible workflows"],
     methods: ["Pipeline engineering", "R/Python analytics", "Result visualization and reporting"],
-    applications: ["Clinical-ready analysis support", "Patient-specific genomic insights", "Research-to-practice transfer"]
+    applications: ["Clinical-ready analysis support", "Patient-specific genomic insights", "Research-to-practice transfer"],
+    relatedProjectIds: ["cnv-r-toolkit", "traceable-sccnv", "dpgmm-cnv"]
   }
 ];

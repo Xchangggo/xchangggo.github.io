@@ -24,8 +24,9 @@ export default function HomePage() {
 
         <div className="space-y-4">
           <p data-i18n="home.profile" className="text-sm font-medium uppercase tracking-[0.16em] text-muted">Academic Profile</p>
-          <h1 className="font-display text-4xl leading-tight text-ink md:text-5xl">
-            {siteProfile.name} <span className="text-2xl text-muted md:text-3xl">({siteProfile.bilingualName})</span>
+          <h1 className="font-display leading-tight text-ink">
+            <span className="block text-4xl md:text-5xl">{siteProfile.bilingualName}</span>
+            <span className="mt-1 block text-3xl text-muted md:text-4xl">{siteProfile.name}</span>
           </h1>
           <p data-i18n="home.tagline" className="text-lg text-ink/90">{siteProfile.tagline}</p>
           <p data-i18n="home.intro" className="max-w-3xl text-base leading-relaxed text-muted">{siteProfile.intro}</p>
@@ -71,12 +72,9 @@ export default function HomePage() {
           <div className="space-y-3">
             {topResearch.map((theme) => (
               <article key={theme.id} className="rounded-xl border border-line p-4">
-                <h3 data-i18n={`content.research.${theme.id}.title`} className="font-semibold text-ink">
+                <Link href={`/research#${theme.id}`} data-i18n={`content.research.${theme.id}.title`} className="font-semibold text-ink underline-offset-4 hover:text-accent hover:underline">
                   {theme.title}
-                </h3>
-                <p data-i18n={`content.research.${theme.id}.summary`} className="mt-1 text-sm leading-relaxed text-muted">
-                  {theme.summary}
-                </p>
+                </Link>
               </article>
             ))}
           </div>
@@ -88,16 +86,13 @@ export default function HomePage() {
             {topProjects.map((project) => (
               <article key={project.id} className="rounded-xl border border-line p-4">
                 <div className="flex items-start justify-between gap-3">
-                  <h3 data-i18n={`content.projects.${project.id}.title`} className="font-semibold text-ink">
+                  <Link href={`/projects#${project.id}`} data-i18n={`content.projects.${project.id}.title`} className="font-semibold text-ink underline-offset-4 hover:text-accent hover:underline">
                     {project.title}
-                  </h3>
+                  </Link>
                   <span data-i18n={`content.projects.${project.id}.period`} className="shrink-0 text-xs font-semibold uppercase tracking-[0.14em] text-muted">
                     {project.period}
                   </span>
                 </div>
-                <p data-i18n={`content.projects.${project.id}.summary`} className="mt-1 text-sm leading-relaxed text-muted">
-                  {project.summary}
-                </p>
                 <div className="mt-2 flex flex-wrap gap-2">
                   {project.tags.slice(0, 3).map((tag, idx) => (
                     <Tag key={tag} data-i18n={`content.projects.${project.id}.tags.${idx}`}>

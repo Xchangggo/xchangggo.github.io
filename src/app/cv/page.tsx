@@ -4,6 +4,7 @@ import { PageIntro } from "@/components/motion/PageIntro";
 import { Reveal } from "@/components/motion/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { education } from "@/content/education";
+import { researchThemes } from "@/content/research";
 import { projects } from "@/content/projects";
 import { awards, researchExperience, skillGroups } from "@/content/cv";
 
@@ -90,26 +91,56 @@ export default function CvPage() {
       </section>
 
       <section className="space-y-6">
-        <SectionHeading title="Selected projects" titleKey="cv.selected_projects" />
-        <div className="space-y-3">
-          {projects.slice(0, 6).map((project, idx) => (
-            <Reveal key={project.id} delay={idx * 0.03}>
-              <article className="rounded-xl border border-line/70 bg-paper/85 p-5">
-                <div className="flex flex-wrap items-baseline justify-between gap-3">
-                  <h3 data-i18n={`content.projects.${project.id}.title`} className="font-semibold text-ink">
-                    {project.title}
-                  </h3>
-                  <p data-i18n={`content.projects.${project.id}.period`} className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
-                    {project.period}
-                  </p>
-                </div>
-                <p data-i18n={`content.projects.${project.id}.summary`} className="mt-2 text-sm leading-relaxed text-muted">
-                  {project.summary}
-                </p>
-              </article>
-            </Reveal>
-          ))}
-        </div>
+        <SectionHeading title="Integrated research and projects" titleKey="cv.integrated_work" />
+        <Reveal>
+          <article className="rounded-xl border border-line/70 bg-paper/85 p-5">
+            <p data-i18n="cv.integrated_work_desc" className="text-sm leading-relaxed text-muted">
+              To avoid duplicate long-form content, detailed descriptions are consolidated in dedicated Research and Projects pages. This CV section shows
+              indexed entries for quick navigation.
+            </p>
+            <div className="mt-5 grid gap-6 md:grid-cols-2">
+              <div>
+                <h3 data-i18n="cv.integrated_research" className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                  Research themes
+                </h3>
+                <ul className="mt-3 space-y-2">
+                  {researchThemes.map((theme) => (
+                    <li key={theme.id}>
+                      <Link
+                        href={`/research#${theme.id}`}
+                        data-i18n={`content.research.${theme.id}.title`}
+                        className="text-sm font-semibold text-ink underline-offset-4 hover:text-accent hover:underline"
+                      >
+                        {theme.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h3 data-i18n="cv.integrated_projects" className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                  Project entries
+                </h3>
+                <ul className="mt-3 space-y-2">
+                  {projects.map((project) => (
+                    <li key={project.id} className="flex flex-wrap items-baseline justify-between gap-3">
+                      <Link
+                        href={`/projects#${project.id}`}
+                        data-i18n={`content.projects.${project.id}.title`}
+                        className="text-sm font-semibold text-ink underline-offset-4 hover:text-accent hover:underline"
+                      >
+                        {project.title}
+                      </Link>
+                      <span data-i18n={`content.projects.${project.id}.period`} className="text-xs uppercase tracking-[0.14em] text-muted">
+                        {project.period}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </article>
+        </Reveal>
       </section>
 
       <section className="grid gap-8 pb-4 md:grid-cols-2">

@@ -10,7 +10,7 @@ export function Tag({ children, className, ...props }: TagProps) {
     <span
       {...props}
       className={clsx(
-        "inline-flex items-center rounded-full border border-line/80 bg-paper/85 px-3 py-1 text-xs font-medium text-ink/80",
+        "inline-flex items-center rounded-full border border-line/70 bg-paper/90 px-3 py-1 text-xs font-medium text-ink/85",
         className
       )}
     >

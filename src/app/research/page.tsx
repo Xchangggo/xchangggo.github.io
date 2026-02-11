@@ -4,8 +4,11 @@ import { PageIntro } from "@/components/motion/PageIntro";
 import { Reveal } from "@/components/motion/Reveal";
 import { Tag } from "@/components/ui/Tag";
 import { researchThemes } from "@/content/research";
+import { projects } from "@/content/projects";
 
 export default function ResearchPage() {
+  const projectsById = new Map(projects.map((project) => [project.id, project]));
+
   return (
     <Container className="space-y-16 py-10 md:py-16">
       <PageIntro
@@ -20,7 +23,7 @@ export default function ResearchPage() {
       <div className="grid gap-5">
         {researchThemes.map((theme, idx) => (
           <Reveal key={theme.id} delay={idx * 0.04}>
-            <article className="rounded-2xl border border-line/70 bg-paper/90 p-6 shadow-card md:p-8">
+            <article id={theme.id} className="rounded-2xl border border-line/70 bg-paper/90 p-6 shadow-card md:p-8">
               <h2 data-i18n={`content.research.${theme.id}.title`} className="font-display text-3xl text-ink">
                 {theme.title}
               </h2>
@@ -33,7 +36,7 @@ export default function ResearchPage() {
                   <h3 data-i18n="research.keywords" className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">Keywords</h3>
                   <div className="mt-3 flex flex-wrap gap-2">
                     {theme.keywords.map((item, itemIdx) => (
-                      <Tag key={item} data-i18n={`content.research.${theme.id}.keywords.${itemIdx}`}>
+                      <Tag key={item} data-i18n={`content.research.${theme.id}.keywords.${itemIdx}`} className="keyword-tag">
                         {item}
                       </Tag>
                     ))}
@@ -60,6 +63,35 @@ export default function ResearchPage() {
                   </ul>
                 </div>
               </div>
+
+              {theme.relatedProjectIds?.length ? (
+                <div className="mt-7 border-t border-line/70 pt-5">
+                  <h3 data-i18n="research.related_projects" className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
+                    Related projects
+                  </h3>
+                  <div className="mt-3 grid gap-3 md:grid-cols-2">
+                    {theme.relatedProjectIds
+                      .flatMap((projectId) => {
+                        const project = projectsById.get(projectId);
+                        return project ? [project] : [];
+                      })
+                      .map((project) => (
+                        <Link
+                          key={project.id}
+                          href={`/projects#${project.id}`}
+                          className="rounded-lg border border-line/70 bg-paper/80 p-3 transition-colors hover:border-accent/40"
+                        >
+                          <p data-i18n={`content.projects.${project.id}.title`} className="text-sm font-semibold text-ink">
+                            {project.title}
+                          </p>
+                          <p data-i18n={`content.projects.${project.id}.period`} className="mt-1 text-xs uppercase tracking-[0.12em] text-muted">
+                            {project.period}
+                          </p>
+                        </Link>
+                      ))}
+                  </div>
+                </div>
+              ) : null}
             </article>
           </Reveal>
         ))}
