@@ -8,7 +8,7 @@ import { awards, researchExperience, skillGroups } from "@/content/cv";
 
 export default function PortfolioPage() {
   return (
-    <Container className="space-y-12 py-10 md:space-y-14 md:py-16">
+    <Container className="space-y-10 py-10 md:space-y-12 md:py-16">
       <PageIntro
         eyebrow="Portfolio"
         title="Projects and CV Snapshot"
@@ -18,26 +18,26 @@ export default function PortfolioPage() {
         descriptionKey="portfolio.description"
       />
 
-      <section id="projects" className="space-y-6">
+      <section id="projects" className="focus-panel rounded-2xl p-5 md:p-7">
         <h2 data-i18n="projects.title" className="font-display text-3xl text-ink">
           Applied research and engineering
         </h2>
-        <div className="grid gap-5 md:grid-cols-2">
+        <div className="list-divider mt-5">
           {projects.map((project, idx) => (
             <Reveal key={project.id} delay={idx * 0.03}>
-              <article id={`project-${project.id}`} className="h-full rounded-2xl border border-line/70 bg-paper p-6 shadow-card">
-                <div className="flex items-start justify-between gap-3">
+              <article id={`project-${project.id}`} className="py-5">
+                <div className="flex flex-wrap items-start justify-between gap-3">
                   <h3 data-i18n={`content.projects.${project.id}.title`} className="font-display text-2xl text-ink">
                     {project.title}
                   </h3>
-                  <span data-i18n={`content.projects.${project.id}.period`} className="shrink-0 rounded-full bg-accentSoft px-3 py-1 text-xs font-semibold text-accent">
+                  <span data-i18n={`content.projects.${project.id}.period`} className="rounded-full bg-white px-3 py-1 text-xs font-semibold text-accent shadow-sm">
                     {project.period}
                   </span>
                 </div>
-                <p data-i18n={`content.projects.${project.id}.summary`} className="mt-4 text-sm leading-relaxed text-muted">
+                <p data-i18n={`content.projects.${project.id}.summary`} className="mt-3 max-w-3xl text-sm leading-relaxed text-muted">
                   {project.summary}
                 </p>
-                <div className="mt-5 flex flex-wrap gap-2">
+                <div className="mt-4 flex flex-wrap gap-2">
                   {project.tags.map((tag, tagIdx) => (
                     <Tag key={tag} data-i18n={`content.projects.${project.id}.tags.${tagIdx}`}>
                       {tag}
@@ -50,17 +50,17 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      <section id="cv" className="space-y-6 border-t border-line/70 pt-8">
+      <section id="cv" className="soft-panel rounded-2xl p-5 md:p-7">
         <h2 data-i18n="cv.title" className="font-display text-3xl text-ink">
           Academic CV
         </h2>
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="mt-5 grid gap-8 md:grid-cols-2">
           <div className="space-y-6">
-            <article className="rounded-xl border border-line/70 bg-paper p-5">
+            <article className="left-accent space-y-3 pl-4">
               <h3 data-i18n="cv.education" className="text-sm font-semibold uppercase tracking-[0.16em] text-muted">
                 Education
               </h3>
-              <ul className="mt-3 space-y-3">
+              <ul className="space-y-3">
                 {education.map((entry) => (
                   <li key={entry.id}>
                     <p data-i18n={`content.education.${entry.id}.degree`} className="font-semibold text-ink">
@@ -74,11 +74,11 @@ export default function PortfolioPage() {
               </ul>
             </article>
 
-            <article className="rounded-xl border border-line/70 bg-paper p-5">
+            <article className="left-accent space-y-3 pl-4">
               <h3 data-i18n="cv.research_experience" className="text-sm font-semibold uppercase tracking-[0.16em] text-muted">
                 Research experience
               </h3>
-              <ul className="mt-3 space-y-3">
+              <ul className="space-y-3">
                 {researchExperience.map((entry) => (
                   <li key={entry.id}>
                     <p data-i18n={`content.cv.researchExperience.${entry.id}.role`} className="font-semibold text-ink">
@@ -94,11 +94,11 @@ export default function PortfolioPage() {
           </div>
 
           <div className="space-y-6">
-            <article className="rounded-xl border border-line/70 bg-paper p-5">
+            <article className="left-accent space-y-3 pl-4">
               <h3 data-i18n="cv.technical_skills" className="text-sm font-semibold uppercase tracking-[0.16em] text-muted">
                 Technical skills
               </h3>
-              <ul className="mt-3 space-y-2">
+              <ul className="space-y-2">
                 {skillGroups.map((group, groupIdx) => (
                   <li key={group.name} className="text-sm text-muted">
                     <span data-i18n={`content.cv.skillGroups.${groupIdx}.name`} className="font-semibold text-ink">
@@ -109,11 +109,11 @@ export default function PortfolioPage() {
               </ul>
             </article>
 
-            <article className="rounded-xl border border-line/70 bg-paper p-5">
+            <article className="left-accent space-y-3 pl-4">
               <h3 data-i18n="cv.awards" className="text-sm font-semibold uppercase tracking-[0.16em] text-muted">
                 Awards
               </h3>
-              <ul className="mt-3 space-y-2">
+              <ul className="space-y-2">
                 {awards.map((award, awardIdx) => (
                   <li key={award.title}>
                     <p data-i18n={`content.cv.awards.${awardIdx}.title`} className="font-semibold text-ink">
