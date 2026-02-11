@@ -16,10 +16,13 @@ export default function AboutPage() {
         eyebrow="About"
         title="Academic profile"
         description="Training in applied statistics and biology, focused on bioinformatics, CNV detection, and clinical-oriented genomic analysis."
+        eyebrowKey="about.eyebrow"
+        titleKey="about.title"
+        descriptionKey="about.description"
       />
 
       <section className="space-y-6">
-        <SectionHeading title="Bio" />
+        <SectionHeading title="Bio" titleKey="about.bio" />
         <Reveal>
           <div className="max-w-4xl space-y-4 text-base leading-relaxed text-muted md:text-lg">
             <p>
@@ -41,7 +44,7 @@ export default function AboutPage() {
       </section>
 
       <section className="space-y-6">
-        <SectionHeading title="Research interests" />
+        <SectionHeading title="Research interests" titleKey="about.research_interests" />
         <div className="grid gap-4 md:grid-cols-2">
           {researchThemes.map((theme, idx) => (
             <Reveal key={theme.id} delay={idx * 0.05}>
@@ -55,7 +58,7 @@ export default function AboutPage() {
       </section>
 
       <section className="space-y-6 pb-4">
-        <SectionHeading title="Education timeline" />
+        <SectionHeading title="Education timeline" titleKey="about.education_timeline" />
         <ol className="space-y-4">
           {education.map((entry, idx) => (
             <Reveal key={entry.id} delay={idx * 0.05}>

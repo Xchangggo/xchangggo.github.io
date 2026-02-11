@@ -78,6 +78,19 @@ h3:hover .heading-anchor {
   display: none;
 }
 
+.frosted-nav {
+  background: rgba(251, 252, 254, 0.72);
+  -webkit-backdrop-filter: blur(14px) saturate(130%);
+  backdrop-filter: blur(14px) saturate(130%);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+@supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .frosted-nav {
+    background: rgba(251, 252, 254, 0.95);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

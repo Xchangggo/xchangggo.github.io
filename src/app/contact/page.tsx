@@ -20,13 +20,16 @@ export default function ContactPage() {
         eyebrow="Contact"
         title="Get in touch"
         description="Open to research collaboration and academic opportunities in bioinformatics, computational genomics, and CNV algorithm development."
+        eyebrowKey="contact.eyebrow"
+        titleKey="contact.title"
+        descriptionKey="contact.description"
       />
 
       <section className="grid gap-5 pb-4 md:grid-cols-2">
         <Reveal>
           <article className="rounded-2xl border border-line/70 bg-paper/90 p-6 shadow-card">
-            <h2 className="font-display text-2xl text-ink">Primary contact</h2>
-            <p className="mt-3 text-sm leading-relaxed text-muted">
+            <h2 data-i18n="contact.primary" className="font-display text-2xl text-ink">Primary contact</h2>
+            <p data-i18n="contact.primary_desc" className="mt-3 text-sm leading-relaxed text-muted">
               For research collaborations or academic inquiries, email is the preferred channel.
             </p>
             <Link href={`mailto:${siteProfile.email}`} className="mt-5 inline-flex text-lg font-semibold text-accent hover:underline">
@@ -38,7 +41,7 @@ export default function ContactPage() {
 
         <Reveal delay={0.08}>
           <article className="rounded-2xl border border-line/70 bg-paper/90 p-6 shadow-card">
-            <h2 className="font-display text-2xl text-ink">Social and profile links</h2>
+            <h2 data-i18n="contact.social" className="font-display text-2xl text-ink">Social and profile links</h2>
             <ul className="mt-4 space-y-3">
               {socialLinks.map((link) => (
                 <li key={link.label}>

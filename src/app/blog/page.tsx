@@ -15,13 +15,16 @@ export default function BlogPage() {
         eyebrow="Blog"
         title="Notes on AI, data, and research practice"
         description="A minimalist writing space for technical reflections and research process notes."
+        eyebrowKey="blog.eyebrow"
+        titleKey="blog.title"
+        descriptionKey="blog.description"
       />
 
       <section className="space-y-4 pb-4">
         {posts.length === 0 ? (
           <Reveal>
-            <p className="rounded-xl border border-dashed border-line bg-paper/80 p-6 text-sm text-muted">
-              No posts yet. Add markdown files in <code>content/blog</code> to publish new entries.
+            <p data-i18n="blog.empty" className="rounded-xl border border-dashed border-line bg-paper/80 p-6 text-sm text-muted">
+              No posts yet. Add markdown files in content/blog to publish new entries.
             </p>
           </Reveal>
         ) : (
@@ -37,7 +40,9 @@ export default function BlogPage() {
                 <p className="mt-3 text-sm leading-relaxed text-muted">{post.excerpt}</p>
                 <div className="mt-4 flex flex-wrap items-center gap-2">
                   {post.tags?.map((tag) => <Tag key={tag}>{tag}</Tag>)}
-                  <span className="ml-auto text-xs font-medium text-muted">{post.readingTimeMinutes} min read</span>
+                  <span className="ml-auto text-xs font-medium text-muted">
+                    {post.readingTimeMinutes} <span data-i18n="blog.min_read">min read</span>
+                  </span>
                 </div>
               </article>
             </Reveal>

@@ -12,6 +12,9 @@ export default function ProjectsPage() {
         eyebrow="Projects"
         title="Applied research and engineering"
         description="Selected work in CNV detection, bioinformatics workflows, scientific computing with R/Python, and statistical modeling competitions."
+        eyebrowKey="projects.eyebrow"
+        titleKey="projects.title"
+        descriptionKey="projects.description"
       />
 
       <section className="grid gap-5 md:grid-cols-2">

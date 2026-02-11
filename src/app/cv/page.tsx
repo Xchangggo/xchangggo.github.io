@@ -14,12 +14,16 @@ export default function CvPage() {
         eyebrow="Curriculum Vitae"
         title="Academic CV"
         description="Education, CNV-focused research experience, technical skills, and selected achievements."
+        eyebrowKey="cv.eyebrow"
+        titleKey="cv.title"
+        descriptionKey="cv.description"
       />
 
       <Reveal>
         <Link
           href="/files/Xu_Mengchang_CV.pdf"
           target="_blank"
+          data-i18n="cv.download"
           className="inline-flex rounded-full bg-ink px-5 py-2 text-sm font-semibold text-paper transition-colors hover:bg-accent"
         >
           Download PDF CV
@@ -27,7 +31,7 @@ export default function CvPage() {
       </Reveal>
 
       <section className="space-y-6">
-        <SectionHeading title="Education" />
+        <SectionHeading title="Education" titleKey="cv.education" />
         <div className="space-y-4">
           {education.map((entry, idx) => (
             <Reveal key={entry.id} delay={idx * 0.04}>
@@ -51,7 +55,7 @@ export default function CvPage() {
       </section>
 
       <section className="space-y-6">
-        <SectionHeading title="Research experience" />
+        <SectionHeading title="Research experience" titleKey="cv.research_experience" />
         <div className="space-y-4">
           {researchExperience.map((entry, idx) => (
             <Reveal key={entry.id} delay={idx * 0.04}>
@@ -73,7 +77,7 @@ export default function CvPage() {
       </section>
 
       <section className="space-y-6">
-        <SectionHeading title="Selected projects" />
+        <SectionHeading title="Selected projects" titleKey="cv.selected_projects" />
         <div className="space-y-3">
           {projects.slice(0, 6).map((project, idx) => (
             <Reveal key={project.id} delay={idx * 0.03}>
@@ -91,7 +95,7 @@ export default function CvPage() {
 
       <section className="grid gap-8 pb-4 md:grid-cols-2">
         <div className="space-y-6">
-          <SectionHeading title="Technical skills" />
+          <SectionHeading title="Technical skills" titleKey="cv.technical_skills" />
           <div className="space-y-3">
             {skillGroups.map((group) => (
               <article key={group.name} className="rounded-xl border border-line/70 bg-paper/85 p-5">
@@ -103,7 +107,7 @@ export default function CvPage() {
         </div>
 
         <div className="space-y-6">
-          <SectionHeading title="Awards" />
+          <SectionHeading title="Awards" titleKey="cv.awards" />
           <div className="space-y-3">
             {awards.map((award) => (
               <article key={award.title} className="rounded-xl border border-line/70 bg-paper/85 p-5">

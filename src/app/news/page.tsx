@@ -12,6 +12,9 @@ export default function NewsPage() {
         eyebrow="News"
         title="Chronological updates"
         description="Academic milestones, project updates, and recent achievements."
+        eyebrowKey="news.eyebrow"
+        titleKey="news.title"
+        descriptionKey="news.description"
       />
 
       <section className="relative space-y-4 pb-4 before:absolute before:bottom-0 before:left-2 before:top-0 before:w-px before:bg-line/80">
@@ -27,6 +30,7 @@ export default function NewsPage() {
                   href={item.href}
                   target="_blank"
                   rel="noreferrer"
+                  data-i18n="news.learn_more"
                   className="mt-3 inline-flex text-sm font-semibold text-accent underline-offset-4 hover:underline"
                 >
                   Learn more
