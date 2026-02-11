@@ -171,9 +171,11 @@ export const i18n: Record<SupportedLanguage, Record<string, string>> = {
     "content.news.2025-06.title": "获南方医科大学生物学硕士学位",
     "content.news.2025-06.description":
       "完成以 CNV 检测、基因组数据分析和跨学科统计建模为核心的生物信息学研究训练。",
-    "content.news.2025-12.title": "共同第一作者论文被 Journal of Advanced Research 接收",
-    "content.news.2025-12.description":
+    "content.news.2025-11.title": "共同第一作者论文被 Journal of Advanced Research 接收",
+    "content.news.2025-11.description":
       "论文《A medium throughput approach for single cell copy number variation sequencing towards efficient application in clinics》已接收，负责流程开发、可视化和 CNV 算法实现。",
+    "content.news.2025-10.title": "加入广州国家实验室苗智超课题组担任科研助理",
+    "content.news.2025-10.description": "以科研助理身份加入课题组，开展 CNV 相关算法研究与生物信息学流程实现。",
     "content.news.2024-10.title": "参与 DNA 拷贝数检测发明专利申请",
     "content.news.2024-10.description": "参与基于密度曲线的 DNA 拷贝数检测方法设计与技术文档撰写。",
     "content.news.2024-03.title": "开发并维护 CNV 分析 R 工具包",
@@ -428,9 +430,12 @@ export const i18n: Record<SupportedLanguage, Record<string, string>> = {
     "content.news.2025-06.title": "Received MSc degree in Biology from Southern Medical University",
     "content.news.2025-06.description":
       "Completed graduate training with a bioinformatics focus on CNV detection, genomic data analysis, and cross-disciplinary statistical modeling.",
-    "content.news.2025-12.title": "Co-first author manuscript accepted by Journal of Advanced Research",
-    "content.news.2025-12.description":
+    "content.news.2025-11.title": "Co-first author manuscript accepted by Journal of Advanced Research",
+    "content.news.2025-11.description":
       "Accepted manuscript \"A medium throughput approach for single cell copy number variation sequencing towards efficient application in clinics\" with responsibilities in pipeline development, visualization, and CNV algorithm implementation.",
+    "content.news.2025-10.title": "Joined Miao Zhichao Lab at Guangzhou National Laboratory as Research Assistant",
+    "content.news.2025-10.description":
+      "Joined the research group as a Research Assistant, focusing on CNV-related algorithm research and bioinformatics workflow implementation.",
     "content.news.2024-10.title": "Participated in invention patent application on DNA copy number detection",
     "content.news.2024-10.description":
       "Contributed to method design and technical documentation for a density-curve-based DNA copy number detection approach.",
