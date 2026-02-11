@@ -23,8 +23,12 @@ export default function NewsPage() {
             <article className="relative ml-8 rounded-xl border border-line/70 bg-paper/90 p-5">
               <span className="absolute -left-[2.05rem] top-5 h-3 w-3 rounded-full border border-accent bg-paper" aria-hidden />
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">{formatMonth(item.date)}</p>
-              <h2 className="mt-2 font-semibold text-ink">{item.title}</h2>
-              <p className="mt-2 text-sm leading-relaxed text-muted">{item.description}</p>
+              <h2 data-i18n={`content.news.${item.date}.title`} className="mt-2 font-semibold text-ink">
+                {item.title}
+              </h2>
+              <p data-i18n={`content.news.${item.date}.description`} className="mt-2 text-sm leading-relaxed text-muted">
+                {item.description}
+              </p>
               {item.href ? (
                 <Link
                   href={item.href}

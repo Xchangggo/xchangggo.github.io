@@ -85,6 +85,37 @@ h3:hover .heading-anchor {
   box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
 }
 
+.lang-switch {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.lang-switch__label {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  pointer-events: none;
+}
+
+.lang-switch__thumb {
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  z-index: 1;
+  height: 24px;
+  width: 34px;
+  border-radius: 9999px;
+  background: rgba(37, 99, 235, 0.17);
+  border: 1px solid rgba(37, 99, 235, 0.25);
+  transition: transform 0.25s ease;
+  pointer-events: none;
+}
+
+.lang-switch[data-lang="en"] .lang-switch__thumb {
+  transform: translateX(36px);
+}
+
 @supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
   .frosted-nav {
     background: rgba(251, 252, 254, 0.95);

@@ -25,16 +25,16 @@ export default function AboutPage() {
         <SectionHeading title="Bio" titleKey="about.bio" />
         <Reveal>
           <div className="max-w-4xl space-y-4 text-base leading-relaxed text-muted md:text-lg">
-            <p>
+            <p data-i18n="about.bio.p1">
               {siteProfile.name} is a bioinformatics researcher working at the intersection of mathematics and life science. Current work focuses on
               copy number variation detection, single-cell sequencing analysis, and robust algorithm design for genomic data.
             </p>
-            <p>
+            <p data-i18n="about.bio.p2">
               He received an MSc in Biology from Southern Medical University and a BSc in Applied Statistics from Northeastern University, building a
               strong foundation in statistics, modeling, and data analysis for biomedical research.
             </p>
             {latestPublication ? (
-              <p>
+              <p data-i18n-html="about.bio.p3">
                 Recent publication activity includes the manuscript <em>{latestPublication.title}</em> submitted to {latestPublication.venue}. Work
                 also includes participation in related invention patent applications.
               </p>
@@ -49,8 +49,12 @@ export default function AboutPage() {
           {researchThemes.map((theme, idx) => (
             <Reveal key={theme.id} delay={idx * 0.05}>
               <article className="h-full rounded-xl border border-line/70 bg-paper/85 p-5">
-                <h3 className="font-display text-2xl text-ink">{theme.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted">{theme.summary}</p>
+                <h3 data-i18n={`content.research.${theme.id}.title`} className="font-display text-2xl text-ink">
+                  {theme.title}
+                </h3>
+                <p data-i18n={`content.research.${theme.id}.summary`} className="mt-3 text-sm leading-relaxed text-muted">
+                  {theme.summary}
+                </p>
               </article>
             </Reveal>
           ))}
@@ -64,15 +68,21 @@ export default function AboutPage() {
             <Reveal key={entry.id} delay={idx * 0.05}>
               <li className="rounded-xl border border-line/70 bg-paper/85 p-5">
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted">
-                  {entry.startDate} - {entry.endDate}
+                  <span data-i18n={`content.education.${entry.id}.startDate`}>{entry.startDate}</span> -{" "}
+                  <span data-i18n={`content.education.${entry.id}.endDate`}>{entry.endDate}</span>
                 </p>
-                <h3 className="mt-2 font-display text-2xl text-ink">{entry.degree}</h3>
+                <h3 data-i18n={`content.education.${entry.id}.degree`} className="mt-2 font-display text-2xl text-ink">
+                  {entry.degree}
+                </h3>
                 <p className="text-sm text-muted">
-                  {entry.institution} | {entry.location}
+                  <span data-i18n={`content.education.${entry.id}.institution`}>{entry.institution}</span> |{" "}
+                  <span data-i18n={`content.education.${entry.id}.location`}>{entry.location}</span>
                 </p>
                 <ul className="mt-3 list-disc space-y-1 pl-5 text-sm text-muted">
-                  {entry.highlights.map((item) => (
-                    <li key={item}>{item}</li>
+                  {entry.highlights.map((item, itemIdx) => (
+                    <li key={item} data-i18n={`content.education.${entry.id}.highlights.${itemIdx}`}>
+                      {item}
+                    </li>
                   ))}
                 </ul>
               </li>

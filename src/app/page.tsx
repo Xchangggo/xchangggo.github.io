@@ -37,13 +37,16 @@ export default function HomePage() {
 
           <div className="grid gap-2 rounded-xl border border-line bg-paper/60 p-4 text-sm md:grid-cols-2">
             <p>
-              <span data-i18n="home.current" className="font-semibold text-ink">Current:</span> {siteProfile.currentRole.title}
+              <span data-i18n="home.current" className="font-semibold text-ink">Current:</span>{" "}
+              <span data-i18n="content.site.currentRole.title">{siteProfile.currentRole.title}</span>
             </p>
             <p>
-              <span data-i18n="home.institution" className="font-semibold text-ink">Institution:</span> {siteProfile.currentRole.institution}
+              <span data-i18n="home.institution" className="font-semibold text-ink">Institution:</span>{" "}
+              <span data-i18n="content.site.currentRole.institution">{siteProfile.currentRole.institution}</span>
             </p>
             <p>
-              <span data-i18n="home.location" className="font-semibold text-ink">Location:</span> {siteProfile.location}
+              <span data-i18n="home.location" className="font-semibold text-ink">Location:</span>{" "}
+              <span data-i18n="content.site.location">{siteProfile.location}</span>
             </p>
             <p>
               <span data-i18n="home.email" className="font-semibold text-ink">Email:</span> {siteProfile.email}
@@ -73,8 +76,12 @@ export default function HomePage() {
           <div className="space-y-3">
             {topResearch.map((theme) => (
               <article key={theme.id} className="rounded-xl border border-line p-4">
-                <h3 className="font-semibold text-ink">{theme.title}</h3>
-                <p className="mt-1 text-sm leading-relaxed text-muted">{theme.summary}</p>
+                <h3 data-i18n={`content.research.${theme.id}.title`} className="font-semibold text-ink">
+                  {theme.title}
+                </h3>
+                <p data-i18n={`content.research.${theme.id}.summary`} className="mt-1 text-sm leading-relaxed text-muted">
+                  {theme.summary}
+                </p>
               </article>
             ))}
           </div>
@@ -86,13 +93,21 @@ export default function HomePage() {
             {topProjects.map((project) => (
               <article key={project.id} className="rounded-xl border border-line p-4">
                 <div className="flex items-start justify-between gap-3">
-                  <h3 className="font-semibold text-ink">{project.title}</h3>
-                  <span className="shrink-0 text-xs font-semibold uppercase tracking-[0.14em] text-muted">{project.period}</span>
+                  <h3 data-i18n={`content.projects.${project.id}.title`} className="font-semibold text-ink">
+                    {project.title}
+                  </h3>
+                  <span data-i18n={`content.projects.${project.id}.period`} className="shrink-0 text-xs font-semibold uppercase tracking-[0.14em] text-muted">
+                    {project.period}
+                  </span>
                 </div>
-                <p className="mt-1 text-sm leading-relaxed text-muted">{project.summary}</p>
+                <p data-i18n={`content.projects.${project.id}.summary`} className="mt-1 text-sm leading-relaxed text-muted">
+                  {project.summary}
+                </p>
                 <div className="mt-2 flex flex-wrap gap-2">
-                  {project.tags.slice(0, 3).map((tag) => (
-                    <Tag key={tag}>{tag}</Tag>
+                  {project.tags.slice(0, 3).map((tag, idx) => (
+                    <Tag key={tag} data-i18n={`content.projects.${project.id}.tags.${idx}`}>
+                      {tag}
+                    </Tag>
                   ))}
                 </div>
               </article>
@@ -108,7 +123,7 @@ export default function HomePage() {
             <li key={`${item.date}-${item.title}`}>
               <span className="font-semibold text-ink">{formatMonth(item.date)}</span>
               <span className="px-2">-</span>
-              {item.title}
+              <span data-i18n={`content.news.${item.date}.title`}>{item.title}</span>
             </li>
           ))}
         </ul>

@@ -35,7 +35,9 @@ export default function ContactPage() {
             <Link href={`mailto:${siteProfile.email}`} className="mt-5 inline-flex text-lg font-semibold text-accent hover:underline">
               {siteProfile.email}
             </Link>
-            <p className="mt-4 text-sm text-muted">{siteProfile.location}</p>
+            <p data-i18n="content.site.location" className="mt-4 text-sm text-muted">
+              {siteProfile.location}
+            </p>
           </article>
         </Reveal>
 
@@ -51,8 +53,10 @@ export default function ContactPage() {
                     rel={link.href.startsWith("mailto:") ? undefined : "noreferrer"}
                     className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-colors hover:text-accent"
                   >
-                    <span className="rounded-full border border-line px-2 py-1 text-xs text-muted">{iconByKey[link.iconKey]}</span>
-                    {link.label}
+                    <span data-i18n={`content.social.${link.iconKey}.icon`} className="rounded-full border border-line px-2 py-1 text-xs text-muted">
+                      {iconByKey[link.iconKey]}
+                    </span>
+                    <span data-i18n={`content.social.${link.iconKey}.label`}>{link.label}</span>
                   </Link>
                 </li>
               ))}

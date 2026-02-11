@@ -21,31 +21,41 @@ export default function ResearchPage() {
         {researchThemes.map((theme, idx) => (
           <Reveal key={theme.id} delay={idx * 0.04}>
             <article className="rounded-2xl border border-line/70 bg-paper/90 p-6 shadow-card md:p-8">
-              <h2 className="font-display text-3xl text-ink">{theme.title}</h2>
-              <p className="mt-4 max-w-4xl text-base leading-relaxed text-muted md:text-lg">{theme.summary}</p>
+              <h2 data-i18n={`content.research.${theme.id}.title`} className="font-display text-3xl text-ink">
+                {theme.title}
+              </h2>
+              <p data-i18n={`content.research.${theme.id}.summary`} className="mt-4 max-w-4xl text-base leading-relaxed text-muted md:text-lg">
+                {theme.summary}
+              </p>
 
               <div className="mt-6 grid gap-5 md:grid-cols-3">
                 <div>
                   <h3 data-i18n="research.keywords" className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">Keywords</h3>
                   <div className="mt-3 flex flex-wrap gap-2">
-                    {theme.keywords.map((item) => (
-                      <Tag key={item}>{item}</Tag>
+                    {theme.keywords.map((item, itemIdx) => (
+                      <Tag key={item} data-i18n={`content.research.${theme.id}.keywords.${itemIdx}`}>
+                        {item}
+                      </Tag>
                     ))}
                   </div>
                 </div>
                 <div>
                   <h3 data-i18n="research.methods" className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">Methods</h3>
                   <ul className="mt-3 space-y-1 text-sm text-muted">
-                    {theme.methods.map((item) => (
-                      <li key={item}>- {item}</li>
+                    {theme.methods.map((item, itemIdx) => (
+                      <li key={item} data-i18n={`content.research.${theme.id}.methods.${itemIdx}`}>
+                        - {item}
+                      </li>
                     ))}
                   </ul>
                 </div>
                 <div>
                   <h3 data-i18n="research.applications" className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">Applications</h3>
                   <ul className="mt-3 space-y-1 text-sm text-muted">
-                    {theme.applications.map((item) => (
-                      <li key={item}>- {item}</li>
+                    {theme.applications.map((item, itemIdx) => (
+                      <li key={item} data-i18n={`content.research.${theme.id}.applications.${itemIdx}`}>
+                        - {item}
+                      </li>
                     ))}
                   </ul>
                 </div>

@@ -88,12 +88,15 @@ export function SiteHeader() {
         <button
           type="button"
           data-lang-toggle
+          data-lang={lang}
           data-i18n-aria-label="lang.toggle_aria"
-          className="inline-flex h-8 min-w-11 items-center justify-center rounded-full border border-line/80 bg-paper/70 px-3 text-xs font-semibold text-ink transition-colors hover:border-accent/50 hover:text-accent"
+          className="lang-switch relative inline-flex h-8 w-[78px] items-center rounded-full border border-line/80 bg-paper/70 px-1 text-[11px] font-semibold text-ink/80 transition-colors hover:border-accent/50"
           onClick={onToggleLanguage}
           aria-label="Switch language"
         >
-          EN
+          <span className="lang-switch__label">中</span>
+          <span className="lang-switch__label">EN</span>
+          <span className="lang-switch__thumb" aria-hidden />
         </button>
       </div>
     </header>
