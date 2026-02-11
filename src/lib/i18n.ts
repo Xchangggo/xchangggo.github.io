@@ -7,7 +7,7 @@ export const i18n: Record<SupportedLanguage, Record<string, string>> = {
     "layout.skip_to_content": "跳转到主要内容",
     "header.home_aria": "返回首页",
     "header.brand_name": "徐萌昌",
-    "header.brand_subtitle": "Xu Mengchang",
+    "header.brand_subtitle": "Mengchang Xu",
     "nav.home": "首页",
     "nav.research": "研究",
     "nav.projects": "项目",
@@ -263,7 +263,7 @@ export const i18n: Record<SupportedLanguage, Record<string, string>> = {
   en: {
     "layout.skip_to_content": "Skip to main content",
     "header.home_aria": "Go to homepage",
-    "header.brand_name": "Xu Mengchang",
+    "header.brand_name": "Mengchang Xu",
     "header.brand_subtitle": "徐萌昌",
     "nav.home": "Home",
     "nav.research": "Research",
@@ -289,7 +289,7 @@ export const i18n: Record<SupportedLanguage, Record<string, string>> = {
     "about.description": "Training in applied statistics and biology, focused on bioinformatics, CNV detection, and clinical-oriented genomic analysis.",
     "about.bio": "Bio",
     "about.bio.p1":
-      "Xu Mengchang is a bioinformatics researcher working at the intersection of mathematics and life science. Current work focuses on copy number variation detection, single-cell sequencing analysis, and robust algorithm design for genomic data.",
+      "Mengchang Xu is a bioinformatics researcher working at the intersection of mathematics and life science. Current work focuses on copy number variation detection, single-cell sequencing analysis, and robust algorithm design for genomic data.",
     "about.bio.p2":
       "He received an MSc in Biology from Southern Medical University and a BSc in Applied Statistics from Northeastern University, building a strong foundation in statistics, modeling, and data analysis for biomedical research.",
     "about.bio.p3":

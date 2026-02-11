@@ -1,7 +1,7 @@
 import type { NavLink, SiteProfile } from "@/types/content";
 
 export const siteProfile: SiteProfile = {
-  name: "Xu Mengchang",
+  name: "Mengchang Xu",
   bilingualName: "徐萌昌",
   tagline: "Bioinformatics researcher focused on CNV detection and genomic data analysis.",
   intro:
