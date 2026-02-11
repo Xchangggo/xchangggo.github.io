@@ -19,7 +19,7 @@ const newsItems: NewsItem[] = [
     date: "2025-10",
     title: "Joined Miao Zhichao Lab at Guangzhou National Laboratory as Research Assistant",
     description:
-      "Joined the research group as a Research Assistant, focusing on CNV-related algorithm research and bioinformatics workflow implementation."
+      "Worked as a Research Assistant with research directions in AI agents, RNA biology, and single-cell analysis for lung development."
   },
   {
     date: "2024-10",

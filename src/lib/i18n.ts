@@ -175,7 +175,7 @@ export const i18n: Record<SupportedLanguage, Record<string, string>> = {
     "content.news.2025-11.description":
       "论文《A medium throughput approach for single cell copy number variation sequencing towards efficient application in clinics》已接收，负责流程开发、可视化和 CNV 算法实现。",
     "content.news.2025-10.title": "加入广州国家实验室苗智超课题组担任科研助理",
-    "content.news.2025-10.description": "以科研助理身份加入课题组，开展 CNV 相关算法研究与生物信息学流程实现。",
+    "content.news.2025-10.description": "以科研助理身份开展 AI agent、RNA 生物学与肺发育单细胞分析方向研究。",
     "content.news.2024-10.title": "参与 DNA 拷贝数检测发明专利申请",
     "content.news.2024-10.description": "参与基于密度曲线的 DNA 拷贝数检测方法设计与技术文档撰写。",
     "content.news.2024-03.title": "开发并维护 CNV 分析 R 工具包",
@@ -253,9 +253,9 @@ export const i18n: Record<SupportedLanguage, Record<string, string>> = {
     "content.cv.awards.0.title": "优秀毕业生与一等奖学业奖学金",
     "content.cv.awards.0.date": "南方医科大学，2022-2025",
     "content.cv.awards.0.note": "同时获评优秀研究生/骨干学生等荣誉，并多次获得奖学金。",
-    "content.cv.awards.1.title": "国家励志奖学金与优秀学生荣誉",
+    "content.cv.awards.1.title": "优秀学生与优秀共产党员荣誉",
     "content.cv.awards.1.date": "东北大学，2018-2022",
-    "content.cv.awards.1.note": "两次获国家励志奖学金，并获优秀学生、优秀共产党员等荣誉。",
+    "content.cv.awards.1.note": "获优秀学生、优秀共产党员等荣誉。",
     "content.cv.awards.2.title": "全国竞赛奖项（数学与市场分析）",
     "content.cv.awards.2.date": "2020-2021",
     "content.cv.awards.2.note": "在全国数学建模与市场分析竞赛中获一、二等奖。"
@@ -435,7 +435,7 @@ export const i18n: Record<SupportedLanguage, Record<string, string>> = {
       "Accepted manuscript \"A medium throughput approach for single cell copy number variation sequencing towards efficient application in clinics\" with responsibilities in pipeline development, visualization, and CNV algorithm implementation.",
     "content.news.2025-10.title": "Joined Miao Zhichao Lab at Guangzhou National Laboratory as Research Assistant",
     "content.news.2025-10.description":
-      "Joined the research group as a Research Assistant, focusing on CNV-related algorithm research and bioinformatics workflow implementation.",
+      "Worked as a Research Assistant with research directions in AI agents, RNA biology, and single-cell analysis for lung development.",
     "content.news.2024-10.title": "Participated in invention patent application on DNA copy number detection",
     "content.news.2024-10.description":
       "Contributed to method design and technical documentation for a density-curve-based DNA copy number detection approach.",
@@ -514,10 +514,9 @@ export const i18n: Record<SupportedLanguage, Record<string, string>> = {
     "content.cv.awards.0.title": "Outstanding Graduate and First-Class Academic Scholarship",
     "content.cv.awards.0.date": "Southern Medical University, 2022-2025",
     "content.cv.awards.0.note": "Also recognized as Outstanding Postgraduate/Backbone student with multiple scholarship awards.",
-    "content.cv.awards.1.title": "National Encouragement Scholarship and Outstanding Student Honors",
+    "content.cv.awards.1.title": "Outstanding Student and Outstanding CPC Member Honors",
     "content.cv.awards.1.date": "Northeastern University, 2018-2022",
-    "content.cv.awards.1.note":
-      "Received National Encouragement Scholarship twice, plus Outstanding Student and Outstanding CPC Member honors.",
+    "content.cv.awards.1.note": "Recognized with Outstanding Student and Outstanding CPC Member honors.",
     "content.cv.awards.2.title": "National Competition Awards (Math and Market Analysis)",
     "content.cv.awards.2.date": "2020-2021",
     "content.cv.awards.2.note": "Includes first/second-class prizes in national mathematical and market analysis competitions."

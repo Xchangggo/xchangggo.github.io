@@ -64,9 +64,9 @@ export const awards: AwardItem[] = [
     note: "Also recognized as Outstanding Postgraduate/Backbone student with multiple scholarship awards."
   },
   {
-    title: "National Encouragement Scholarship and Outstanding Student Honors",
+    title: "Outstanding Student and Outstanding CPC Member Honors",
     date: "Northeastern University, 2018-2022",
-    note: "Received National Encouragement Scholarship twice, plus Outstanding Student and Outstanding CPC Member honors."
+    note: "Recognized with Outstanding Student and Outstanding CPC Member honors."
   },
   {
     title: "National Competition Awards (Math and Market Analysis)",
